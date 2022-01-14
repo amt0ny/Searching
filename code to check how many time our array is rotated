@@ -1,0 +1,22 @@
+        int arr[] = {8,9,2,3,4,5,6,7};
+        int higher = arr.length-1;
+        int find = 5;
+        int lower = 0;
+        int first = -1;
+        int last = -1;
+        while (higher>=lower){
+
+            int middle = (lower + higher) / 2;
+            int next = (middle + 1) % arr.length;
+            int previous = (middle - 1) % arr.length;
+            if (arr[next]>arr[middle] && arr[previous]>arr[middle]){
+                System.out.println(length-middle);
+                break;
+            }
+            else if (arr[lower]<=arr[middle]){
+                lower = middle;
+            }
+            else if (arr[higher]>=arr[middle]){
+                higher = middle;
+            }
+        }
