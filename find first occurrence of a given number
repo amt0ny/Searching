@@ -1,0 +1,20 @@
+
+        int arr[] = {1,2,3,4,5,5,5,6,7,8,9};
+        int firstfive = 5;
+        int low = 0;
+        int high = arr.length-1;
+        int result = -1;
+        while (high>=low){
+            int mid = (high+low)/2;
+            if (firstfive == arr[mid]){
+                result = mid;
+                high = mid-1;
+            }
+            else if (firstfive > arr[mid]){
+                low = mid+1;
+            }
+            else if (firstfive< arr[mid]){
+                high = mid-1;
+            }
+        }
+        System.out.println(result);}}
